@@ -1,0 +1,109 @@
+<html>
+	<head>
+	<title>LOGIN</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+	<style>
+	body{
+		background-image: url("shop.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+	.main {
+	width: 500px;
+	margin: 0 auto;
+	padding: 30px 0;
+  	font-size: 15px;
+	}
+	form {
+	color: antiquewhite;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	padding: 50px;
+	}
+	.button {
+  background-color: #4CAF50; /* Green */
+  float:right;
+  border: none;
+  color: white;
+  padding: 1px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 35px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+h1{
+	font-family: 'Berkshire Swash', cursive;
+	text-align: center;
+	color:aliceblue;
+}
+input[type=text]{
+	border-radius: 5px;
+	height: 40px;
+}
+h2{
+	text-align: center;
+	color:rgb(230, 123, 173);
+}
+	</style>
+	<script>
+		function validateForm() {
+		let user = document.forms["form"]["Email"].value;
+		let np = document.forms["form"]["NP"].value;
+		if (user == "") {
+			alert("Email must be filled out");
+			return false;
+		}
+		if (np == "") {
+			alert("PASSWORD must be filled out");
+			return false;
+		}
+		else if(np.length<5 || np.length >20){
+			alert("PASSWORD length must be between 5 and 20");
+			return false;
+		}
+	}
+			
+		
+		
+			
+		
+		</script>
+	</head>
+	<body>
+        <h1>Shop prime</h1>
+		<h2>LOGIN</h2>
+		<div class="main">
+		<form name="form" action="fd-project.html" onsubmit="return validateForm()">
+			
+				<label>Email:</label><br>
+				<input type="text" id="user" name="Email"placeholder="Email" size="50">
+			<br><br>
+				<label>PASSWORD:</label><br>
+				<input type="text" id="password" name="NP" placeholder="password" size="50">
+			<br><br>
+			<div class="submit">
+				<a href="forget" style="font-size:17;color:antiquewhite">forget password</a>
+				
+				<button class="button button1">LOGIN</button>
+		
+                
+			</div>
+		</form>
+		</div>
+	</body>
+</html>
